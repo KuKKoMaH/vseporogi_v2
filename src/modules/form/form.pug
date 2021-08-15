@@ -1,0 +1,36 @@
+.form
+  .form__head
+    .form__title Решение для вашего автомобиля
+    .form__text Наш менеджер подберет варианты, перезвонит и проконсультирует вас, это займет 3 минуты
+  .form__row.form__row--double
+    .form__col
+      select(placeholder='Марка')
+        option
+        option(value=1) Audi
+        option(value=2) BMW
+        option(value=3) AAA
+    .form__col
+      select(placeholder='Модель')
+        option
+        option Audi
+        option BMW
+  .form__row
+    select(placeholder='Поколение' disabled)
+      option
+      option Audi
+      option BMW
+  .form__row.form__row--double
+    .form__col
+      select(placeholder='Кузов')
+        option
+        option Audi
+        option BMW
+    .form__col
+      select(placeholder='Комплект')
+        option
+        option Audi
+        option BMW
+  button.btn.btn--block ОТПРАВИТЬ ЗАЯВКУ
+  .form__contacts
+    | Или позвоните нам, бесплатно по РФ
+    a(href='tel:#') 8 800 505-75-58

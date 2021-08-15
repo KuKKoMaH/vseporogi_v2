@@ -1,0 +1,68 @@
+.info {
+  $this: &;
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    @include media('md') {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include media('md') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__col {
+    flex: 1;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 75px;
+    margin-bottom: 40px;
+    min-height: 50px;
+    display: flex;
+    //flex-direction: column;
+    align-items: center;
+    @include text-main();
+
+    &:last-child {
+      margin-bottom: 0;
+      @include media('md') {
+        margin-bottom: 50px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      color: $red;
+    }
+  }
+
+  &__label {
+    @include text-main();
+    margin-bottom: 15px;
+  }
+
+  &__phone {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: bold;
+    color: $red;
+    display: block;
+    margin: 20px 0;
+    @include media('md') {
+      font-size: 27px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}

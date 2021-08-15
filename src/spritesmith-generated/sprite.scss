@@ -1,0 +1,112 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$vk-name: 'vk';
+$vk-x: 0px;
+$vk-y: 0px;
+$vk-offset-x: 0px;
+$vk-offset-y: 0px;
+$vk-width: 32px;
+$vk-height: 32px;
+$vk-total-width: 64px;
+$vk-total-height: 64px;
+$vk-image: 'src/spritesmith-generated/sprite.png';
+$vk: (0px, 0px, 0px, 0px, 32px, 32px, 64px, 64px, 'src/spritesmith-generated/sprite.png', 'vk', );
+$whatsapp-name: 'whatsapp';
+$whatsapp-x: 32px;
+$whatsapp-y: 0px;
+$whatsapp-offset-x: -32px;
+$whatsapp-offset-y: 0px;
+$whatsapp-width: 32px;
+$whatsapp-height: 32px;
+$whatsapp-total-width: 64px;
+$whatsapp-total-height: 64px;
+$whatsapp-image: 'src/spritesmith-generated/sprite.png';
+$whatsapp: (32px, 0px, -32px, 0px, 32px, 32px, 64px, 64px, 'src/spritesmith-generated/sprite.png', 'whatsapp', );
+$instagram-name: 'instagram';
+$instagram-x: 0px;
+$instagram-y: 32px;
+$instagram-offset-x: 0px;
+$instagram-offset-y: -32px;
+$instagram-width: 32px;
+$instagram-height: 32px;
+$instagram-total-width: 64px;
+$instagram-total-height: 64px;
+$instagram-image: 'src/spritesmith-generated/sprite.png';
+$instagram: (0px, 32px, 0px, -32px, 32px, 32px, 64px, 64px, 'src/spritesmith-generated/sprite.png', 'instagram', );
+$spritesheet-width: 64px;
+$spritesheet-height: 64px;
+$spritesheet-image: 'src/spritesmith-generated/sprite.png';
+$spritesheet-sprites: ($vk, $whatsapp, $instagram, );
+$spritesheet: (64px, 64px, 'src/spritesmith-generated/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

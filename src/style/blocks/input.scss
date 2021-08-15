@@ -1,0 +1,35 @@
+.input {
+  input, textarea {
+    text-align: left;
+    display: block;
+    width: 100%;
+    border: 1px solid $gray;
+    font-size: 14px;
+    height: 44px;
+    padding: 14px 10px;
+    border-radius: 4px;
+    transition: border .2s ease-in;
+
+    &:hover {
+      border-color: #919191;
+    }
+
+    &:focus {
+      //border-color: $dark-grey;
+    }
+
+    &.wpcf7-not-valid {
+      border-color: $red;
+      color: $red;
+      @include placeholder($red);
+    }
+  }
+
+  textarea {
+    height: 120px;
+    min-width: 100%;
+    max-width: 100%;
+    resize: vertical;
+  }
+
+}

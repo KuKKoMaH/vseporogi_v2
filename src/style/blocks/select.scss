@@ -1,0 +1,83 @@
+.selectize {
+  $this: &;
+
+  &-control {
+    text-align: left;
+  }
+
+  &-input {
+    position: relative;
+    height: 44px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 0 30px 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    @include anim();
+
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 9px;
+      height: 2px;
+      background: $text;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+      right: 15px;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+      right: 10px;
+    }
+
+    &:hover {
+      border-color: $darkGray;
+    }
+
+    &.input-active {
+      border-color: $darkGray;
+    }
+
+    &.disabled {
+      background: $gray;
+
+      &:hover {
+        border-color: $gray;
+      }
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    z-index: 1;
+    margin-top: 2px;
+
+    .option {
+      min-height: 41px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include anim();
+
+      &.active {
+        background: #F2D9D9;
+      }
+
+      &.selected {
+        background: $red;
+        color: $white;
+      }
+    }
+  }
+
+}

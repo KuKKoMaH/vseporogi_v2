@@ -1,0 +1,107 @@
+@mixin cf() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin anim($duration: .1s) {
+  transition: all $duration ease-in;
+}
+
+@mixin shadow() {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin media-max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media($condition) {
+  @if ($condition == 'lg') {
+    @media screen and (max-width: $breakpoint-lg - 1) {
+      @content;
+    }
+  }
+  @if ($condition == 'md') {
+    @media screen and (max-width: $breakpoint-md - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin text-lg() {
+  font-size: 24px;
+}
+
+@mixin text-main() {
+  font-size: 21px;
+  @include media('md') {
+    font-size: 18px;
+  }
+}
+
+@mixin text-sm() {
+  font-size: 14px;
+  @include media('md') {
+    font-size: 11px;
+  }
+}
+
+@mixin h1() {
+  font-size: 36px;
+  font-weight: 700;
+  @include media('md') {
+    font-size: 27px;
+  }
+}
+
+@mixin h2() {
+  font-size: 32px;
+  font-weight: 700;
+  @include media('md') {
+    font-size: 22px;
+  }
+}
+
+@mixin h3() {
+  font-size: 27px;
+  font-weight: 700;
+  @include media('md') {
+    font-size: 20px;
+  }
+}
+
+@mixin h4() {
+  font-size: 21px;
+  font-weight: 700;
+  @include media('md') {
+    font-size: 16px;
+  }
+}
+
+@mixin h5() {
+  font-size: 18px;
+  font-weight: 700;
+  @include media('md') {
+    font-size: 14px;
+  }
+}

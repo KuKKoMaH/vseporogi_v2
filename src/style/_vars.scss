@@ -1,0 +1,33 @@
+// ====================================
+// colors
+// ====================================
+
+$black: #000;
+$white: #fff;
+$red: #CC262A;
+$gray: #CACACA;
+$darkGray: #909090;
+$text: #686868;
+$lightBg: #F9F6F1;
+$darkBg: #3C3B3B;
+
+// ====================================
+// grid settings
+// ====================================
+$gutter: 15px;
+$gutter-half: ($gutter / 2);
+
+//$breakpoint-sm: 468px
+$breakpoint-lg: 798px;
+$breakpoint-md: 1300px;
+
+//$container-sm: 468px
+$container-md: 768px;
+$container-lg: 1270px;
+
+
+$header_zIndex_background: 11;
+$header_zIndex_bottom: 12;
+$header_zIndex_menu: 13;
+$header_zIndex_top: 14;
+$header_zIndex_search: 15;

@@ -1,0 +1,25 @@
+include _mixins
+
+block html
+doctype html
+html
+  head
+    title VSEPOROGI
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta#viewport(name="viewport" content="width=device-width, user-scalable=no")
+    block style
+    //link(rel="stylesheet" media="all" href="style.css")
+    //link(rel="shortcut icon" href="/favicon.ico")
+
+  body(onunload="")
+    include ../modules/header/header
+    block body
+    include ../modules/footer/footer
+
+    include ../modules/photoswipe/photoswipe
+    include ../modules/popup/popup-callback
+    .hidden
+
+    script.
+      (function ( w, dE ) {function u() {dE.style.setProperty('--scrollbar-width', w.innerWidth - dE.clientWidth + "px");}w.addEventListener('resize', u);u()})(window, document.documentElement)

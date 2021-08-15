@@ -1,0 +1,52 @@
+.partners {
+  $this: &;
+
+  background: $lightBg;
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    @include media('md') {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 770px;
+    flex: 1;
+    @include media('md') {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__form {
+    width: 440px;
+    flex-shrink: 0;
+    margin-left: auto;
+    @include media('md') {
+      width: 100%;
+      .form {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      padding-left: 30px;
+      position: relative;
+    }
+
+    svg {
+      position: absolute;
+      width: 20px;
+      height: 15px;
+      left: 0;
+      top: 9px;
+    }
+  }
+}

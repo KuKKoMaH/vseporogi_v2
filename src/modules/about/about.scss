@@ -1,0 +1,65 @@
+.about {
+  $this: &;
+
+  &__row {
+    display: flex;
+    @include media('md') {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: 600px;
+    margin-right: 30px;
+    flex-shrink: 0;
+    background: $gray;
+    @include media('md') {
+      width: 100%;
+      height: 240px;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__right {
+
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    @include media('md') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__label {
+    @include text-sm();
+    color: $gray;
+    margin-bottom: 5px;
+    @include media('md') {
+      font-size: 14px;
+    }
+  }
+
+  &__phone {
+    @include h4();
+    color: $red;
+    @include media('md') {
+      font-size: 22px;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    @include media('md') {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.header__placeholder
+header.header
+  .c.header__row
+    button.header__button
+      .header__buttonShow: +the_svg(require('src/img/menu.sprite.svg'))
+      .header__buttonHide: +the_svg(require('src/img/close.sprite.svg'))
+    .header__logo: +the_svg(require('src/img/logo.sprite.svg'))
+    .header__menu
+      ul
+        li: a(href='#') Выбор порогов
+        li: a(href='#') Стоимость
+        li: a(href='#') Галерея порогов
+        li: a(href='#') Отзывы
+        li: a(href='#') Контакты
+      .header__socials.socials
+        a(href='#'): img(src=require('src/img/sprites/vk.png'))
+        a(href='#'): img(src=require('src/img/sprites/whatsapp.png'))
+        a(href='#'): img(src=require('src/img/sprites/instagram.png'))
+    .header__contacts
+      +the_svg(require('src/img/callback.sprite.svg'))
+      .header__contactsLabel Бесплатно по РФ
+      a(href='tel:#') 8 800 505-75-58

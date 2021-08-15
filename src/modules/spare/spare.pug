@@ -1,0 +1,17 @@
+.spare.block
+  .c
+    .spare__title.h1 Наши детали
+    .spare__text Наши детали повторяют конфигурацию оригинальных порогов и арок. Мы протестировали их на всех марках автомобилей, вот несколько примеров:
+    .spare__container
+      .spare__slider
+        .spare__items
+          each i in [1,2,3,4]
+            .spare__item
+              .spare__img: img(src=require('src/modules/spare/img/spare_01.jpg'))
+              .spare__label Подпись машины
+
+      .nav
+        button.nav__item.nav__item--prev: +the_svg(require('src/img/arrow.sprite.svg'))
+        button.nav__item.nav__item--next: +the_svg(require('src/img/arrow.sprite.svg'))
+    .pagination
+

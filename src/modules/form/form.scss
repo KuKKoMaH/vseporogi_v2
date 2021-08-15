@@ -1,0 +1,54 @@
+.form {
+  $this: &;
+
+  background: $white;
+  border: 1px solid $gray;
+  padding: 30px;
+  border-radius: 6px;
+  text-align: center;
+
+  &__head {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @include h4();
+    @include media('md') {
+      @include h1();
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    color: $text;
+  }
+
+  &__row {
+    margin-bottom: 16px;
+
+    &--double {
+      display: flex;
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+  }
+
+  &__col {
+    flex: 1;
+    margin: 0 5px;
+    min-width: 0;
+  }
+
+  &__contacts {
+    margin-top: 10px;
+    @include text-sm();
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 4px;
+    }
+  }
+}

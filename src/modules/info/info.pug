@@ -1,0 +1,18 @@
+.info.block
+  .c.info__row
+    .info__col
+      .info__title.h1 График работы
+      .info__item
+        +the_svg(require('src/img/call.sprite.svg'))
+        | Заявки по телефону и отправка заказов#[br]с 9 до 21 без выходных
+      .info__item
+        +the_svg(require('src/img/mail.sprite.svg'))
+        | Заявки по электронной почте #[br]mail@vseporogi.com #[br]круглосуточно и без выходных
+
+    .info__col
+      .info__title.h1 Остались вопросы?
+
+      .info__label Звоните по бесплатному номеру
+      a.info__phone(href='tel:#') 8 800 505-75-58
+      .info__label Или закажите
+      button.btn(data-micromodal-trigger="callback-popup") ОБРАТНЫЙ ЗВОНОК

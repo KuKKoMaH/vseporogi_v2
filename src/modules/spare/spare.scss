@@ -1,0 +1,48 @@
+.spare {
+  $this: &;
+
+  background: $darkBg;
+  color: $white;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include text-main();
+    max-width: 860px;
+    margin: 0 auto 50px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__img {
+    img {
+      display: block;
+      margin: 0 auto;
+      @include media('md') {
+        width: 100%;
+      }
+    }
+  }
+
+  &__label {
+    @include text-main();
+    margin-top: 10px;
+  }
+}

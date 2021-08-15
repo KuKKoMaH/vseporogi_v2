@@ -1,0 +1,23 @@
+.partners.block
+  .c.partners__row
+    .partners__content
+      .content
+        .h1 Сотрудничество
+        p Для оказания качественных услуг клиентам мы постоянно растем и расширяемся, поэтому предлагаем сотрудничество для всех регионов РФ и стран СНГ
+        .h3 Предлагаем сотрудничество
+        ul.partners__list
+          li
+            +the_svg(require('src/img/check.sprite.svg'))
+            | Онлайн и офлайн продавцам автозапчастей
+          li
+            +the_svg(require('src/img/check.sprite.svg'))
+            | СТО и частным кузовным сервисам
+          li
+            +the_svg(require('src/img/check.sprite.svg'))
+            | Оптовым и розничным сетям
+        .h3 Оптовым поставщикам
+        p Если вы являетесь оптовым поставщиком, напишите нам на почту post@vseporogi.com или оставьте заявку по кнопке ниже
+        button.btn.btn--outline ОСТАВИТЬ ЗАЯВКУ
+
+    .partners__form
+      include ../form/form_partner

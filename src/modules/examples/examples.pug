@@ -1,0 +1,19 @@
+.examples.block
+  .c
+    .examples__title.h1 Примеры нашей работы
+    .examples__container
+      .examples__slider
+        .examples__items
+          each i in [1,2,3,4]
+            .examples__item
+              .examples__img
+                img(src=require('src/modules/examples/img/examples_01.jpg'))
+                .examples__label До
+              .examples__img
+                img(src=require('src/modules/examples/img/examples_02.jpg'))
+                .examples__label После
+      .nav
+        button.nav__item.nav__item--prev: +the_svg(require('src/img/arrow.sprite.svg'))
+        button.nav__item.nav__item--next: +the_svg(require('src/img/arrow.sprite.svg'))
+    .pagination
+

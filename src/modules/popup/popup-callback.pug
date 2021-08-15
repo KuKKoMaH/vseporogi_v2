@@ -1,0 +1,32 @@
+#callback-popup.popup.micromodal-slide(aria-hidden="true")
+  .popup__overlay(tabindex="-1" data-micromodal-close)
+    .popup__container(role="dialog" aria-modal="true")
+      button.popup__close(data-micromodal-close): +the_svg(require('src/img/close.sprite.svg'))
+      include ../form/form_callback
+      //.popup__iframe
+      //iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      //.popup__image(style='background-image: url(' + require('src/modules/popup/img/img.jpg') + ')')
+      //.popup__content.content
+      //  h5 Оставьте заявку
+      //  p Оставьте ваши контактные данные и наши менеджеры свяжутся с вами в ближайшее время
+      //  .input
+      //    input(placeholder="ФИО")
+      //  .input
+      //    input(placeholder="Организация")
+      //  .input
+      //    input(placeholder="E-mail")
+      //  .input
+      //    input(placeholder="Телефон" type="tel")
+      //
+      //  .popup__accept
+      //    label.checkbox
+      //      input(type='checkbox')
+      //      span Согласен(а) на обработку моих #[a(href='#') персональных данных]
+      //
+      //  button.btn Оставить заявку
+      //
+      //  .popup__success
+      //    span.
+      //      Спасибо!<br/>
+      //      Ваша заявка отправлена.<br/>
+      //      Скоро с Вами свяжется специалист.

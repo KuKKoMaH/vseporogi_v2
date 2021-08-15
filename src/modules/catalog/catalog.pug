@@ -1,0 +1,37 @@
+.block.catalog.catalog--stock
+  .catalog__stock
+    //+the_svg(require('src/img/stock.sprite.svg'))
+    .catalog__stockBadge
+      .catalog__stockTitle АКЦИЯ
+      |до 08.08.2020
+  .c
+    .catalog__row
+      .catalog__item
+        .catalog__card
+          .catalog__img: img(src=require('src/modules/catalog/img/catalog_01.jpg'))
+          .catalog__content
+            .catalog__title Один порог
+            .catalog__text
+              | Толщина: 1 мм.
+              br
+              br
+              | Материал: холоднокатанная, оцинкованная сталь
+            .catalog__footer
+              .catalog__priceOld 2250 руб.
+              .catalog__price 1750 руб.
+              .catalog__btn: button.btn.btn--block(data-micromodal-trigger="callback-popup") ЗАКАЗАТЬ
+
+      .catalog__item
+        .catalog__card
+          .catalog__img: img(src=require('src/modules/catalog/img/catalog_02.jpg'))
+          .catalog__content
+            .catalog__title Одна арка
+            .catalog__text
+              | Толщина: 0.8 мм.
+              br
+              br
+              | Материал: холоднокатанная, оцинкованная сталь
+            .catalog__footer
+              .catalog__priceOld 2500 руб.
+              .catalog__price 1950 руб.
+              .catalog__btn: button.btn.btn--block(data-micromodal-trigger="callback-popup") ЗАКАЗАТЬ

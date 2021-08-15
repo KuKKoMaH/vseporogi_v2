@@ -1,0 +1,183 @@
+.header {
+  $this: &;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+
+  @include media('md') {
+    &--active {
+      #{$this}__buttonShow {
+        opacity: 0;
+      }
+
+      #{$this}__buttonHide {
+        opacity: 1;
+      }
+
+      #{$this}__menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+
+        ul {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  &__placeholder {
+    height: 60px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  &__button {
+    display: none;
+    @include media('md') {
+      display: block;
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      margin-right: 14px;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      svg {
+        position: absolute;
+        color: $red;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__buttonShow {
+    @include anim();
+    opacity: 1;
+  }
+
+  &__buttonHide {
+    @include anim();
+    opacity: 0;
+  }
+
+  &__logo {
+    color: $black;
+    height: 100%;
+
+    svg {
+      width: 105px;
+      height: 100%;
+      @include media('md') {
+        width: 75px;
+      }
+    }
+  }
+
+  &__menu {
+    margin-left: 40px;
+
+    @include media('md') {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      margin: 0;
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      @include anim();
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0 -10px;
+      list-style: none;
+      padding: 0;
+      @include media('md') {
+        flex-direction: column;
+        margin: auto 0;
+        width: 100%;
+        transform: translateY(20px);
+        @include anim();
+      }
+    }
+
+    li {
+      margin: 0 10px;
+      @include media('md') {
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      @include text-sm();
+      color: $text;
+      @include media('md') {
+        @include h2();
+        color: $black;
+      }
+    }
+  }
+
+  &__contacts {
+    margin-left: auto;
+    color: $red;
+    @include h5();
+
+    position: relative;
+    padding-left: 45px;
+    @include media('md') {
+      padding-left: 30px;
+    }
+
+    svg {
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include media('md') {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__contactsLabel {
+    @include text-sm();
+    color: $text;
+    font-weight: normal;
+    margin-bottom: 2px;
+  }
+
+  &__socials {
+    display: none;
+    @include media('md') {
+      display: flex;
+      margin-bottom: 50px;
+      justify-content: center;
+    }
+  }
+}

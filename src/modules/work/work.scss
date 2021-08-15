@@ -1,0 +1,82 @@
+.work {
+  $this: &;
+  @include media('md') {
+    padding-bottom: 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    @include media('md') {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__form {
+    max-width: 440px;
+    margin-right: 50px;
+    @include media('md') {
+      width: auto;
+      margin: 0 -16px;
+      border-top: 1px solid $black;
+
+      .form {
+        border: 0;
+        border-radius: 0;
+        padding: 30px 16px;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    @include media('md') {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    @include media('md') {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    flex: 1;
+  }
+
+  &__item {
+    position: relative;
+    @include text-main();
+    height: 85px;
+    padding-left: 67px;
+    @include media('md') {
+      height: auto;
+      min-height: 45px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: -11px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    line-height: .5;
+    font-weight: bold;
+    color: $white;
+  }
+}

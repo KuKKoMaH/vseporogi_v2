@@ -1,0 +1,95 @@
+.nav {
+  $this: &;
+
+
+  &__item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 66px;
+    height: 66px;
+    background: $red;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include anim();
+    @include media('md') {
+      width: 40px;
+      height: 40px;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    svg {
+      width: 38px;
+      height: 38px;
+      @include media('md') {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--prev {
+      left: 0;
+      margin-left: -12px;
+      @include media('md') {
+        margin-left: -16px;
+      }
+    }
+
+    &--next {
+      right: 0;
+      margin-right: -12px;
+      @include media('md') {
+        margin-right: -16px;
+      }
+    }
+
+    &:hover {
+      background: darken($red, 10%);
+    }
+
+    &:active {
+      background: darken($red, 15%);
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  @include media('md') {
+    margin-top: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 5px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: $gray;
+      border-radius: 50%;
+      @include anim();
+    }
+  }
+
+  .swiper-pagination-bullet-active:before {
+    background: $red;
+  }
+}

@@ -1,0 +1,19 @@
+.testimonials.block
+  .c
+    .testimonials__title.h1 Отзывы наших клиентов
+    .testimonials__container
+      .testimonials__slider
+        .testimonials__items
+          each i in [1,2,3,4]
+            .testimonials__item
+              .testimonials__card
+                .testimonials__img: img(src=require('src/modules/testimonials/img/testimonials_01.jpg'))
+                .testimonials__content
+                  .testimonials__name Николай Васильевич
+                  .testimonials__text Видео-отзыв о замене порогов на Волге 3102
+
+      .nav
+        button.nav__item.nav__item--prev: +the_svg(require('src/img/arrow.sprite.svg'))
+        button.nav__item.nav__item--next: +the_svg(require('src/img/arrow.sprite.svg'))
+    .pagination
+

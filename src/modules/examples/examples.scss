@@ -1,0 +1,62 @@
+.examples {
+  $this: &;
+
+  background: $lightBg;
+  padding-top: 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__items {
+    display: flex;
+
+  }
+
+  &__img {
+    position: relative;
+      @include media('md') {
+        &:first-child {
+          #{$this}__label {
+            bottom: auto;
+            top: 0;
+          }
+        }
+      }
+    img {
+      display: block;
+      @include media('md') {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-shrink: 0;
+    @include media('md') {
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: $white;
+    background: $darkBg;
+    padding: 5px 20px 10px;
+  }
+}
