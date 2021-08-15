@@ -10,7 +10,7 @@ const config = {
     const youtubeId = $el.data('youtubeId');
     if (youtubeId) {
       const iframe = `<iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>`;
-      $(modal).find('.modal__iframe').html(iframe);
+      $(modal).find('.popup__iframe').html(iframe);
     }
   },
   onClose:             modal => {

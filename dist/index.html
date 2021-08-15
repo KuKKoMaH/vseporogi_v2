@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1629045416445" rel="stylesheet"></head>
+  <link href="style.css?1629058812029" rel="stylesheet"></head>
   <body onunload="">
     <div class="header__placeholder"></div>
     <header class="header">
@@ -434,7 +434,7 @@
             <div class="testimonials__items">
               <div class="testimonials__item">
                 <div class="testimonials__card">
-                  <div class="testimonials__img"><img src="img/modules_testimonials_img_testimonials_01.jpg"></div>
+                  <button class="testimonials__img" data-micromodal-trigger="iframe-popup" data-youtube-id="dQw4w9WgXcQ"><img src="img/modules_testimonials_img_testimonials_01.jpg"></button>
                   <div class="testimonials__content">
                     <div class="testimonials__name">Николай Васильевич</div>
                     <div class="testimonials__text">Видео-отзыв о замене порогов на Волге 3102</div>
@@ -443,7 +443,7 @@
               </div>
               <div class="testimonials__item">
                 <div class="testimonials__card">
-                  <div class="testimonials__img"><img src="img/modules_testimonials_img_testimonials_01.jpg"></div>
+                  <button class="testimonials__img" data-micromodal-trigger="iframe-popup" data-youtube-id="dQw4w9WgXcQ"><img src="img/modules_testimonials_img_testimonials_01.jpg"></button>
                   <div class="testimonials__content">
                     <div class="testimonials__name">Николай Васильевич</div>
                     <div class="testimonials__text">Видео-отзыв о замене порогов на Волге 3102</div>
@@ -452,7 +452,7 @@
               </div>
               <div class="testimonials__item">
                 <div class="testimonials__card">
-                  <div class="testimonials__img"><img src="img/modules_testimonials_img_testimonials_01.jpg"></div>
+                  <button class="testimonials__img" data-micromodal-trigger="iframe-popup" data-youtube-id="dQw4w9WgXcQ"><img src="img/modules_testimonials_img_testimonials_01.jpg"></button>
                   <div class="testimonials__content">
                     <div class="testimonials__name">Николай Васильевич</div>
                     <div class="testimonials__text">Видео-отзыв о замене порогов на Волге 3102</div>
@@ -461,7 +461,7 @@
               </div>
               <div class="testimonials__item">
                 <div class="testimonials__card">
-                  <div class="testimonials__img"><img src="img/modules_testimonials_img_testimonials_01.jpg"></div>
+                  <button class="testimonials__img" data-micromodal-trigger="iframe-popup" data-youtube-id="dQw4w9WgXcQ"><img src="img/modules_testimonials_img_testimonials_01.jpg"></button>
                   <div class="testimonials__content">
                     <div class="testimonials__name">Николай Васильевич</div>
                     <div class="testimonials__text">Видео-отзыв о замене порогов на Волге 3102</div>
@@ -669,17 +669,19 @@
               <use xlink:href="img/sprite.svg#close-usage"></use>
             </svg>
           </button>
-          <div class="form">
-            <div class="form__head">
-              <div class="form__title">Заказать обратный звонок</div>
-              <div class="form__text">Оставьте номер телефона — мы перезвоним вам в течение 5 минут</div>
-            </div>
-            <div class="form__row">
-              <div class="input">
-                <input placeholder="Телефон">
+          <div class="popup__form">
+            <div class="form">
+              <div class="form__head">
+                <div class="form__title">Заказать обратный звонок</div>
+                <div class="form__text">Оставьте номер телефона — мы перезвоним вам в течение 5 минут</div>
               </div>
+              <div class="form__row">
+                <div class="input">
+                  <input placeholder="Телефон">
+                </div>
+              </div>
+              <button class="btn btn--block">ОТПРАВИТЬ ЗАЯВКУ</button>
             </div>
-            <button class="btn btn--block">ОТПРАВИТЬ ЗАЯВКУ</button>
           </div>
           <!--.popup__iframe-->
           <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->
@@ -708,6 +710,20 @@
           <!--      Спасибо!<br/>-->
           <!--      Ваша заявка отправлена.<br/>-->
           <!--      Скоро с Вами свяжется специалист.-->
+        </div>
+      </div>
+    </div>
+    <div class="popup micromodal-slide" id="iframe-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__container" role="dialog" aria-modal="true">
+          <button class="popup__close" data-micromodal-close>
+            <svg>
+              <use xlink:href="img/sprite.svg#close-usage"></use>
+            </svg>
+          </button>
+          <div class="popup__iframe">
+            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>

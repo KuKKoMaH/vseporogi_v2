@@ -52,7 +52,6 @@
   //  @include shadow();
   //  border-radius: 5px;
   //  background-color: #fff;
-    max-width: 430px;
   }
   //
   //&__image {
@@ -94,7 +93,11 @@
   //  }
   //}
 
-  &__video {
+  &__form {
+    max-width: 430px;
+  }
+
+  &__iframe {
     max-width: 100%;
     width: 780px;
     position: relative;
@@ -118,32 +121,24 @@
 
   &__close {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    //background: $light-light-grey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $white;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    color: #C4C4C4;
     z-index: 1;
     @include anim();
-    //@include media('md') {
-    //  right: 50%;
-    //  margin-right: -25px
-    //}
 
     &:hover {
       //background: $light-grey;
     }
 
     svg {
-      width: 16px;
-      height: 16px;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       @include anim();
+
     }
   }
 
